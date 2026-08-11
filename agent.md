@@ -37,6 +37,12 @@ Catalog of games and features in this folder. Update when something new ships or
 
 ## Changelog
 
+### 2026-08-11 — Snake Run Supabase deploy script
+- **What:** Added `npm run deploy:supabase` to re-upload `dist/` into public Storage with correct MIME types (`text/html`, JS, images)
+- **Why:** Dashboard uploads served `index.html` as plain text (browser showed source instead of the game)
+- **Where:** `snake-run/scripts/deploy-supabase.mjs`, `snake-run/package.json`
+- **Notes:** Target defaults to bucket `games` / prefix `snake-run`. Needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` (never commit the key). Skip macOS `._*` junk files.
+
 ### 2026-08-11 — Snake Run aspect ratio → 4:3
 - **What:** Changed game canvas from portrait 720×1280 to landscape 1024×768 (4:3)
 - **Why:** Match requested aspect ratio while keeping FIT + CENTER_BOTH scaling
