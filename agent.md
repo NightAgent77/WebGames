@@ -31,11 +31,23 @@ Catalog of games and features in this folder. Update when something new ships or
 
 | Name | Path | Status | Notes |
 |------|------|--------|-------|
-| *(none yet)* | — | — | — |
+| Snake Run | `snake-run/` | Playable scaffold | Phaser 3.90 + Vite 6; 4:3 (1024×768); keyboard + mouse |
 
 ---
 
 ## Changelog
+
+### 2026-08-11 — Snake Run aspect ratio → 4:3
+- **What:** Changed game canvas from portrait 720×1280 to landscape 1024×768 (4:3)
+- **Why:** Match requested aspect ratio while keeping FIT + CENTER_BOTH scaling
+- **Where:** `snake-run/src/main.js`
+- **Notes:** Scene layouts use scale width/height, so UI adapts without a full rewrite
+
+### 2026-08-11 — Add Snake Run (Phaser 3 + Vite)
+- **What:** New endless-runner web game: snake steers between lanes to avoid obstacles
+- **Why:** First game in the Web Games portfolio folder
+- **Where:** `snake-run/` (`src/scenes/*`, `src/main.js`, `assets/`, `index.html`, `vite.config.js`)
+- **Notes:** Responsive `Scale.FIT` + `CENTER_BOTH`; relative `./assets/...` paths; Boot → Preload (progress bar) → Menu → Game → GameOver. Controls: ←→ / A D / mouse. Run with `npm run dev` inside `snake-run/`.
 
 ### 2026-08-11 — Create agent.md
 - **What:** Added `agent.md` as the project’s agent log for every add-on and change
