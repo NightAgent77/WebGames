@@ -1,0 +1,16 @@
+---
+description: Update agent.md for every add-on or change in this folder
+alwaysApply: true
+---
+
+# Update agent.md on every change
+
+When you add, change, remove, or restructure anything in this Web Games folder:
+
+1. Update `agent.md` in the same task before you finish.
+2. Prepend a Changelog entry (newest first) with **What**, **Why**, **Where**, and optional **Notes**.
+3. If you ship or remove a game/add-on, update the **Add-ons** table too.
+4. Prefer one changelog entry per completed change set, not per micro-edit.
+5. Never erase prior changelog history.
+
+`agent.md` is the source of truth for what exists here and how it evolved. Read it at the start of non-trivial work.
